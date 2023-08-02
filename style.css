@@ -82,12 +82,38 @@ ul {
 @media (min-width: 770px) { /* para transformar em rem, dividir 770/16 = 48.125 */
     main {
         flex-direction: row; /* faz com que a caixa fique um ao lado do outro */
-        max-width: 100%;
+        max-width: fit-content; 
+        /* fit-content: significa que a caixa usará o espaço disponível, 
+        mas nunca mais do que max-content. 
+        Quando usado como tamanho de caixa definido para width, 
+        height, min-width, min-height, max-width e max-height,
+        os tamanhos máximo e mínimo referem-se ao tamanho do conteúdo. */
         gap: 16rem;
+
+        padding: 9rem 6rem;
     }
 
-    main > div {
-        flex: 1; /* um é equivalente ao tamanho do outro */
-        max-width: 50rem;
+    .recipe {
+        max-width: 43.5rem;
+    }
+
+    .ingredients {
+        max-width: 52.5rem;
+    }
+
+    h1, h2 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    p, li, strong {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
     }
 }
